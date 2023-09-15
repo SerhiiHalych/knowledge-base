@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/outbox-pattern-example/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/outbox-pattern-example/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/outbox-pattern-example",
+  "projects": {
+    "outbox-pattern-example": {
+      "type": "application",
+      "root": "apps/outbox-pattern-example",
+      "entryFile": "main",
+      "sourceRoot": "apps/outbox-pattern-example/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/outbox-pattern-example/tsconfig.app.json"
+      }
+    },
+    "producer": {
+      "type": "application",
+      "root": "apps/producer",
+      "entryFile": "main",
+      "sourceRoot": "apps/producer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/producer/tsconfig.app.json"
+      }
+    },
+    "consumer": {
+      "type": "application",
+      "root": "apps/consumer",
+      "entryFile": "main",
+      "sourceRoot": "apps/consumer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/consumer/tsconfig.app.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    }
+  }
+}
