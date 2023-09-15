@@ -1,0 +1,21 @@
+export enum RqServiceToken {
+  CONSUMER_SERVICE = 'CONSUMER_SERVICE',
+  PRODUCER_SERVICE = 'PRODUCER_SERVICE',
+}
+
+export enum OutboxStatusEnum {
+  OPENED = 'OPENED',
+  CLOSED = 'CLOSED',
+}
+
+export enum RepositoryTokens {
+  CONSUMER_REPOSITORY_INTERFACE = 'CONSUMER_REPOSITORY_INTERFACE',
+  OUTBOX_REPOSITORY_INTERFACE = 'OUTBOX_REPOSITORY_INTERFACE',
+}
+
+export enum TransactionTokens {
+  CREATE_PRODUCER_TRANSACTION_INTERFACE = 'CREATE_PRODUCER_TRANSACTION_INTERFACE',
+}
+
+export const OUTBOX_CLOSE_CMD = 'outbox-close';
+export const CONSUMER_CREATE_CMD = 'consumer-create-cmd';
